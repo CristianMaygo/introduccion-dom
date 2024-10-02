@@ -1,0 +1,71 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+.titulo {
+    text-align: center;
+    width: 100%; /* Asegura que ocupe todo el ancho */
+    margin-top: 0; /* Añade un margen superior */
+    font-size: 8rem;
+    position: absolute;
+    top: 20px;
+    left: 0;
+    font-family: fantasy;
+    color: white;
+    
+}
+
+
+
+body{
+    width: 100%;
+    height: 100vh;
+    background-image: url('../img/imagen2.jpg');
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.form{
+    width: 40%;
+    height: 40%;
+    display: inherit;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    backdrop-filter: blur(10px);
+    
+}
+
+.form div{
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+    align-items: center;
+}
+.form div label{
+    color: white;
+    letter-spacing: 2px;
+}
+
+
+.form div input{
+    outline: none;
+    height: 30px;
+    border-radius: 10px;
+}
+.form button{
+    width: 40%;
+    margin-top: 20px;
+    background-color: gray;
+    height: 35px;
+    border: none;
+    border-radius: 10px;
+}
