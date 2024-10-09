@@ -25,6 +25,17 @@ import { Usuario } from "../../../model/ModelUsarios.js"
 
 console.log(Usuario)
 
+
+
+Usuario.map((index) =>{
+    console.log(index)
+}) 
+
+
+document.getElementById('btnIniciar').addEventListener('click', iniciarSesion)
+
+
+
 function iniciarSesion(){ //Función declarativa
     let Usuario = document.getElementById("Usuario").value
     let Contraseña = document.getElementById("Contraseña").value
