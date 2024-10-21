@@ -21,31 +21,18 @@ console.log(document.querySelector("form"))
 console.log(document.querySelectorAll("form")) */
 
 
-import { Usuario } from "../../../model/ModelUsarios.js"
-
-console.log(Usuario)
-
-
-
-Usuario.map((index) =>{
-    console.log(index)
-}) 
+import { buscarUsuario } from "../../../controller/ControllerCUsarios.js"
 
 
 document.getElementById('btnIniciar').addEventListener('click', iniciarSesion)
 
-
-
-function iniciarSesion(){ //Función declarativa
-    let Usuario = document.getElementById("Usuario").value
-    let Contraseña = document.getElementById("Contraseña").value
-    if(Usuario == 'admin' && Contraseña == '12345'){
-        console.log('Bienvenido')
-    } else {
-        console.log('Error de credenciales')
+function iniciarSesion() {
+    if (buscarUsuario()) {
+        window.location.href = '/view/pages/home.html'
+    }else {
+        console.log('Error de crendenciales')
     }
 }
-
 
 
 /* let iniciarSesion = function(){ Función de expresión 
